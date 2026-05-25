@@ -1,2 +1,2 @@
-# consulta-de.notas-ghc-y.fsn
+# consulta-de.notas-ghc-
 Actividad Evaluativa: Ciudadanía, Motivación y Poder Público
