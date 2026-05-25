@@ -1,0 +1,101 @@
+/* css/estilos.css - Diseño educativo y accesible */
+:root {
+  --color-primario: #1a472a;    /* Verde bolivariano */
+  --color-secundario: #d4af37;  /* Dorado */
+  --color-fondo: #f8f9fa;
+  --color-texto: #2c3e50;
+  --color-error: #c0392b;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+.header-bolivariana {
+  background: linear-gradient(135deg, var(--color-primario), #0d2818);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.contenedor {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.buscador, .resultado {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input[type="text"] {
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: var(--color-primario);
+  outline: none;
+}
+
+button {
+  background: var(--color-primario);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0d2818;
+}
+
+.error {
+  background: #ffebee;
+  color: var(--color-error);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--color-error);
+}
+
+.tarjeta-resultado {
+  border-left: 4px solid var(--color-secundario);
+  padding-left: 1rem;
+}
+
+.oculto { display: none; }
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contenedor { padding: 0 0.5rem; }
+  .buscador, .resultado { padding: 1rem; }
+}
