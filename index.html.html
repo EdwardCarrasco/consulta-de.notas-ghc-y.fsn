@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Consulta de Notas - U.E. Tobogán de la Selva</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+  <header class="header-bolivariana">
+    <h1>🎓 U.E. Tobogán de la Selva</h1>
+    <p>Geografía, Historia y Ciudadanía | Docente: Edward Carrasco</p>
+  </header>
+
+  <main class="contenedor">
+    <section class="buscador">
+      <h2>🔍 Consulta tu nota</h2>
+      <p><strong>Actividad:</strong> ACTIVIDAD PRÁCTICA (FORMULARIO)</p>
+      
+      <form id="formularioBusqueda">
+        <label for="cedula">Número de cédula de identidad:</label>
+        <input 
+          type="text" 
+          id="cedula" 
+          name="cedula" 
+          placeholder="Ej: V-34667882" 
+          required
+          pattern="[Vv\-0-9]{7,12}"
+        />
+        <button type="submit">🔎 Buscar</button>
+      </form>
+      
+      <div id="mensajeError" class="error oculto"></div>
+    </section>
+
+    <section id="resultado" class="resultado oculto">
+      <!-- Se llena dinámicamente con JavaScript -->
+    </section>
+  </main>
+
+  <footer>
+    <p>🔒 Sistema seguro • Consulta personal e intransferible</p>
+    <p>Unidad Educativa "Tobogán de la Selva" - San Joaquín, Carabobo</p>
+  </footer>
+
+  <script src="js/validacion.js"></script>
+  <script src="js/buscar.js"></script>
+</body>
+</html>
